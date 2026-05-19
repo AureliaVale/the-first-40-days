@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>The First 40 Days — A New Mom's Guided Companion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm 18mm 22mm 18mm;
+    }
+    
+    @media print {
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .page-break {
+        page-break-before: always;
+        break-before: page;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
+      p, ul, ol {
+        orphans: 3;
+        widows: 3;
+      }
+    }
+
+    :root {
+      --bg: #fdfaf6;
+      --ink: #2f2a26;
+      --muted: #6f665c;
+      --accent: #b88c7a;
+      --accent-2: #7a8f7a;
+      --rule: #e0d7cc;
+      --highlight: #fff9f5;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Georgia", "Palatino", "Times New Roman", serif;
+      font-size: 11pt;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Helvetica Neue", "Arial", sans-serif;
+      color: var(--ink);
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: 0.2px;
+    }
+
+    h1 { font-size: 26pt; font-weight: 700; margin-bottom: 0.3em; letter-spacing: -0.3px; }
+    h2 { font-size: 17pt; color: var(--accent-2); margin: 1.2em 0 0.5em 0; font-weight: 700; }
+    h3 { font-size: 11pt; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1.8px; margin: 1.5em 0 0.3em 0; }
+    h4 { font-size: 12pt; font-weight: 600; color: var(--accent); margin: 1em 0 0.4em 0; }
+    p { margin: 0 0 0.85em 0; }
+    strong { font-weight: 600; color: var(--ink); }
+    em { font-style: italic; color: var(--ink); }
+    .small { font-size: 9.5pt; color: var(--muted); line-height: 1.5; }
+    .lead { font-size: 13pt; line-height: 1.6; margin-bottom: 1em; color: var(--ink); }
+    .rule { border: none; border-top: 1px solid var(--rule); margin: 1.5em 0; }
+
+    .container { max-width: 700px; margin: 0 auto; padding: 0; }
+    .section { margin: 0 0 2em 0; }
+    .spacer { height: 8mm; }
+
+    .title-card {
+      text-align: center;
+      padding: 25mm 10mm;
+      border: 1.5px solid var(--rule);
+      background: var(--highlight);
+      margin: 20mm 0;
+    }
+
+    .subtitle { font-size: 12pt; color: var(--muted); margin-top: 0.5em; font-weight: 400; letter-spacing: 0.3px; }
+    .meta { margin-top: 1.5em; font-size: 10pt; color: var(--muted); line-height: 1.6; }
+
+    .callout {
+      border-left: 3px solid var(--accent);
+      background: var(--highlight);
+      padding: 0.9em 1.1em;
+      margin: 1.2em 0;
+      page-break-inside: avoid;
+    }
+    .callout strong { display: block; margin-bottom: 0.3em; color: var(--accent); }
+
+    .warning-box {
+      border-left: 3px solid #c75146;
+      background: #fff9f8;
+      padding: 0.9em 1.1em;
+      margin: 1.2em 0;
+      page-break-inside: avoid;
+    }
+    .warning-box strong { color: #c75146; }
+
+    .deep-dive {
+      background: #f7f4f0;
+      padding: 1.8em 1.5em;
+      border: 1px solid var(--rule);
+      margin: 2em 0;
+      page-break-inside: avoid;
+    }
+
+    .checkbox-list { list-style: none; padding-left: 0; margin: 0.8em 0; }
+    .checkbox-list li { margin: 0.5em 0; padding-left: 1.8em; position: relative; }
+    .checkbox-list li:before { content: "☐"; position: absolute; left: 0; color: var(--accent-2); font-size: 13pt; line-height: 1.4; }
+
+    .note-box {
+      border: 1px dashed var(--rule);
+      padding: 1.2em;
+      background: #fff;
+      color: var(--muted);
+      margin: 1.2em 0;
+      min-height: 70pt;
+    }
+    .note-box strong { display: block; margin-bottom: 0.5em; color: var(--ink); font-size: 10pt; }
+
+    .script-box {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--accent-2);
+      padding: 0.9em 1.1em;
+      margin: 0.8em 0;
+      font-style: italic;
+      color: var(--ink);
+      page-break-inside: avoid;
+    }
+
+    table { width: 100%; border-collapse: collapse; margin: 1.2em 0; font-size: 10.5pt; }
+    td { padding: 0.6em 0.8em; border-bottom: 1px solid var(--rule); vertical-align: top; }
+    td:first-child { font-weight: 500; width: 65%; }
+    td:last-child { color: var(--muted); font-size: 9.5pt; }
+
+    ul, ol { margin: 0.8em 0; padding-left: 1.5em; }
+    ul li, ol li { margin: 0.4em 0; line-height: 1.6; }
+
+    footer { margin-top: 2.5em; padding-top: 1em; border-top: 1px solid var(--rule); font-size: 9pt; color: var(--muted); text-align: center; }
+    .page-break { page-break-before: always; break-before: page; }
+    h2, h3, h4 { page-break-after: avoid; break-after: avoid; }
+    .callout, .warning-box, .deep-dive, .script-box, .note-box { page-break-inside: avoid; break-inside: avoid; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- TITLE PAGE -->
+    <section class="title-card">
+      <h1>The First 40 Days</h1>
+      <div class="subtitle">A New Mom's Guided Companion</div>
+      <div class="spacer"></div>
+      <p class="lead">Everything you need to remember — so you can forget everything else and simply rest.</p>
+      <div class="meta">
+        AV Collections · Aurelia Vale<br />
+        2026
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- HOW TO USE -->
+    <section class="section">
+      <h2>How to Use This Guide</h2>
+      <p>This is not a book you "finish." It's a companion for the first 40 days after birth—a time for healing, feeding, sleeping, feeling, and slowly becoming.</p>
+      <ul class="checkbox-list">
+        <li>Read <strong>one daily page</strong> each day (or whenever you can). If you miss a day, skip guilt and begin again.</li>
+        <li>Use the <strong>One small thing</strong> action as a gentle minimum—nothing more.</li>
+        <li>Keep this somewhere within arm's reach: your bedside, feeding station, or bathroom counter.</li>
+        <li>Share the <strong>Boundary scripts</strong> with your partner or gatekeeper so you don't have to repeat yourself.</li>
+        <li>If anything feels urgent or scary, use the <strong>"Is this normal?"</strong> guide—and contact a healthcare provider when in doubt.</li>
+      </ul>
+      <div class="callout">
+        <strong>Gentle reminder:</strong> You don't need to be productive. You need to be supported. Let this guide carry the mental load for a little while.
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- WELCOME LETTER -->
+    <section class="section">
+      <h2>Welcome, Mama</h2>
+      <p class="lead">I'm so glad this book found you.</p>
+      <p>If you're holding this in the first days after birth, you may feel a thousand things at once—exhaustion, awe, tenderness, fear, numbness, love so big it hurts. You might also feel disappointed, overwhelmed, or strangely alone in a room full of people. All of it belongs here.</p>
+      <p>I want you to hear this clearly: <strong>you are not failing.</strong> You are recovering from one of the most intense physical, hormonal, and emotional transitions a human body can go through. No one is meant to do this without care, rest, and help—and yet so many mothers are expected to act as if they're untouched by the storm.</p>
+      <p>This guide was written for the mother who is doing everything "right" and still feels like she's getting it wrong. For the mother Googling at 3 a.m. with one hand while the baby feeds. For the mother who loves her baby deeply and still misses her old life. For the mother who needs permission to heal slowly.</p>
+      <div class="callout">
+        <strong>Permission slip (use it often):</strong> You do not need to host. You do not need to explain. You do not need to bounce back. You do not need to earn rest. You are allowed to receive.
+      </div>
+      <p>Over the next 40 days, I won't ask you to become a different woman. I'll simply walk beside you—day by day—with reminders for your body, your baby, your mind, your boundaries, and your home. Some days will feel tender and sweet. Some days will feel messy and hard. Both are normal. Neither lasts forever.</p>
+      <p>If you take only one thing from this letter, let it be this: <em>the first 40 days are not a performance.</em> They are a passage. You don't have to do it gracefully. You just have to get through it supported.</p>
+      <p>So put your feet up when you can. Ask for the meal. Say no to the visit. Cry when you need to. Drink the water. Text the person who can help. And on the days you forget everything else, come back to this: <strong>rest is not a luxury. It is medicine.</strong></p>
+      <hr class="rule" />
+      <p>With love and steadiness,<br /><strong>Aurelia Vale</strong><br /><span class="small">For you, in the middle of becoming</span></p>
+    </section>
+
+    <!-- DAY 1 -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h3>Day 1</h3>
+      <h2>You Did It</h2>
+      <div class="callout"><strong>Today's focus:</strong> You brought a new life into the world. That is enough for today.</div>
+      <p><strong>Your body today:</strong> You may feel sore, swollen, bleeding, shaky, or strangely energized—sometimes all in an hour. This is normal. Your body is in active recovery.</p>
+      <p><strong>Your heart today:</strong> Whatever you feel—love, relief, fear, numbness—is allowed. You don't need a perfect emotional response to have done something extraordinary.</p>
+      <p><strong>One small thing:</strong></p>
+      <ul class="checkbox-list"><li>Drink a full glass of water and ask someone to bring you a snack.</li></ul>
+      <div class="note-box"><strong>My notes / what I noticed today:</strong><br /></div>
+      <footer>The First 40 Days · Day 1</footer>
+    </section>
+
+    <!-- DAY 2 -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h3>Day 2</h3>
+      <h2>The Milk Will Come</h2>
+      <div class="callout"><strong>Today's focus:</strong> Your milk may not be "in" yet. Your body is doing exactly what it should.</div>
+      <p><strong>Your body today:</strong> Colostrum—thick, golden, small amounts—is exactly what your baby needs right now. Your milk will arrive in the next 2–5 days. Breast fullness, warmth, and tenderness are signs it's on its way.</p>
+      <p><strong>Your heart today:</strong> You may worry you're not producing enough. Trust this: your body knows the recipe. Keep feeding often, stay hydrated, and ask for help if latching feels painful.</p>
+      <p><strong>One small thing:</strong></p>
+      <ul class="checkbox-list"><li>Feed or pump 8–12 times in 24 hours (yes, this is frequent and normal).</li></ul>
+      <div class="note-box"><strong>My notes / what I noticed today:</strong><br /></div>
+      <footer>The First 40 Days · Day 2</footer>
+    </section>
+
+    <!-- DAY 3 -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h3>Day 3</h3>
+      <h2>Permission to Cry</h2>
+      <div class="callout"><strong>Today's focus:</strong> If the tears come today, let them. You are not broken.</div>
+      <p><strong>Your body today:</strong> Hormones are crashing and climbing. You might feel weepy, irritable, overwhelmed, or anxious. This is called the "baby blues" and it's incredibly common around days 2–5.</p>
+      <p><strong>Your heart today:</strong> You may cry over things that don't make sense. You may feel joy and grief in the same breath. All of this is allowed. It doesn't mean something is wrong—it means your body is adjusting to a seismic shift.</p>
+      <p><strong>One small thing:</strong></p>
+      <ul class="checkbox-list"><li>Tell someone how you feel out loud. Even if it sounds irrational. Especially then.</li></ul>
+      <div class="note-box"><strong>My notes / what I noticed today:</strong><br /></div>
+      <footer>The First 40 Days · Day 3</footer>
+    </section>
+
+    <!-- DEEP DIVE 1 -->
+    <div class="page-break"></div>
+    <section class="section deep-dive">
+      <h2>Deep Dive: Your Body Is Healing</h2>
+      <p class="lead">What's happening inside you right now—and what to watch for.</p>
+      
+      <h4>Bleeding (Lochia)</h4>
+      <p>Postpartum bleeding can last 4–6 weeks. It will be heavy and red at first, then taper to brown, pink, and eventually cream-colored discharge.</p>
+      <p><strong>Normal:</strong> Passing small clots (up to plum-sized), needing to change a pad every 2–4 hours in the first few days.</p>
+      <div class="warning-box"><strong>Call your doctor if:</strong> You soak through a pad in an hour, pass clots larger than a plum, or notice a foul smell (sign of infection).</div>
+
+      <h4>Perineum Care (Vaginal Birth)</h4>
+      <p>Whether you tore, had an episiotomy, or feel just bruised and swollen—your perineum needs gentleness.</p>
+      <ul class="checkbox-list">
+        <li>Use a peri bottle (warm water) after every bathroom visit.</li>
+        <li>Pat dry, don't wipe.</li>
+        <li>Clean the area gently with warm water after every bathroom visit and pat dry — never rub.</li>
+        <li>Avoid sitting directly on hard surfaces—use a pillow or donut cushion.</li>
+      </ul>
+
+      <h4>C-Section Incision Care</h4>
+      <p>Your incision is a surgical wound. Treat it with care and watch it closely.</p>
+      <ul class="checkbox-list">
+        <li>Keep it clean and dry.</li>
+        <li>Let air reach it when possible (but cover it with loose clothing).</li>
+        <li>Avoid lifting anything heavier than your baby for 4–6 weeks.</li>
+        <li>Support your abdomen when you cough, sneeze, or laugh.</li>
+      </ul>
+      <div class="warning-box"><strong>Call your doctor if:</strong> The incision is red, hot, oozing, or you develop a fever.</div>
+
+      <h4>Pelvic Floor Basics</h4>
+      <p>Your pelvic floor has been stretched (vaginal) or affected by pregnancy weight (C-section). Either way, it needs rebuilding—but not yet.</p>
+      <p><strong>For now:</strong> Rest. Avoid heavy lifting. Do not start exercises without clearance from your doctor (usually 6 weeks postpartum). Gentle walks are fine once you feel ready.</p>
+
+      <h4>When to Call for Help</h4>
+      <ul class="checkbox-list">
+        <li>Fever over 38°C</li>
+        <li>Severe abdominal pain (beyond normal cramping)</li>
+        <li>Foul-smelling vaginal discharge</li>
+        <li>Painful urination or inability to urinate</li>
+        <li>Chest pain or difficulty breathing</li>
+        <li>Severe headache or vision changes</li>
+        <li>One leg swollen, red, or painful (possible blood clot)</li>
+      </ul>
+      <p class="small">If something feels wrong, trust yourself. It's always better to ask.</p>
+    </section>
+
+    <!-- DAY 4 -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h3>Day 4</h3>
+      <h2>Sleep Is Survival</h2>
+      <div class="callout"><strong>Today's focus:</strong> Sleep when the baby sleeps. Not tomorrow. Right now.</div>
+      <p><strong>Your body today:</strong> You are likely beyond tired—into the fog of exhaustion. Your body needs sleep to heal. Every hour of rest you get matters.</p>
+      <p><strong>Your heart today:</strong> You may feel like you "should" be doing something when the baby naps. You shouldn't. Sleep is not laziness—it's medicine.</p>
+      <p><strong>One small thing:</strong></p>
+      <ul class="checkbox-list"><li>Lie down the next time your baby sleeps. Even if it's only 20 minutes. Even if dishes are in the sink.</li></ul>
+      <div class="note-box"><strong>My notes / what I noticed today:</strong><br /></div>
+      <footer>The First 40 Days · Day 4</footer>
+    </section>
+
+    <!-- DAY 5 -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h3>Day 5</h3>
+      <h2>The First Outing (Even If It's Just the Garden)</h2>
+      <div class="callout"><strong>Today's focus:</strong> Fresh air is healing. You don't need to go far.</div>
+      <p><strong>Your body today:</strong> A short, slow walk—even to the front door, the garden, or around the block—can shift your mood and help your body recover. But only if you feel ready. No pressure.</p>
+      <p><strong>Your heart today:</strong> Leaving the house might feel monumental. That's okay. You're not "behind." You're exactly where you need to be.</p>
+      <p><strong>One small thing:</strong></p>
+      <ul class="checkbox-list"><li>Step outside for 5 minutes. Breathe. That's it.</li></ul>
+      <div class="note-box"><strong>My notes / what I noticed today:</strong><br /></div>
+      <footer>The First 40 Days · Day 5</footer>
+    </section>
+
+    <!-- DAY 6 -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h3>Day 6</h3>
+      <h2>You're Allowed to Ask</h2>
+      <div class="callout"><strong>Today's focus:</strong> Asking for help is not weakness. It's wisdom.</div>
+      <p><strong>Your body today:</strong> You might be feeling a little stronger, or you might be hitting a wall. Either way, you still need support.</p>
+      <p><strong>Your heart today:</strong> Many mothers struggle to ask for help. We're taught to "manage." But this is not the time to prove your strength—this is the time to receive care so you can give it.</p>
+      <p><strong>One small thing:</strong></p>
+      <ul class="checkbox-list"><li>Ask one person for one specific thing: "Can you bring dinner at 6?" "Can you hold the baby for an hour so I can shower and nap?"</li></ul>
+      <div class="note-box"><strong>My notes / what I noticed today:</strong><br /></div>
+      <footer>The First 40 Days · Day 6</footer>
+    </section>
+
+    <!-- DAY 7 -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h3>Day 7</h3>
+      <h2>One Week: You're Still Standing</h2>
+      <div class="callout"><strong>Today's focus:</strong> Seven days. You've made it through the hardest week.</div>
+      <p><strong>Your body today:</strong> Bleeding may be starting to lighten. Your milk is likely in. You may feel less sore—or newly sore in different places (hello, neck and shoulders from holding a baby). Both are normal.</p>
+      <p><strong>Your heart today:</strong> This first week may feel like a blur. That's because it was. You survived it. That matters.</p>
+      <p><strong>One small thing:</strong></p>
+      <ul class="checkbox-list"><li>Drink a full glass of water. Eat a proper meal. Take a moment to notice: you did this.</li></ul>
+      <div class="note-box"><strong>My notes / what I noticed today:</strong><br /></div>
+      <footer>The First 40 Days · Day 7</footer>
+    </section>
+
+    <!-- DEEP DIVE 2 -->
+    <div class="page-break"></div>
+    <section class="section deep-dive">
+      <h2>Deep Dive: Feeding—However It Happens</h2>
+      <p class="lead">Breast, bottle, or both—what matters is that your baby is fed and you are supported.</p>
+
+      <h4>Breastfeeding Basics</h4>
+      <p><strong>Frequency:</strong> 8–12 feeds in 24 hours is normal. Cluster feeding (every 45–90 minutes for hours) often happens in the evenings. It does <em>not</em> mean you have low supply—it's how babies build supply and find comfort.</p>
+      <p><strong>Latch:</strong> A good latch should not hurt. If it does, something needs adjusting. Your baby's mouth should be wide open, covering more of the areola below the nipple than above. Lips flanged out like a fish, not tucked in.</p>
+      <div class="callout"><strong>Get help early:</strong> If feeding is painful, ask a midwife, lactation consultant, or experienced friend to watch a feed within the first 48 hours. A small tweak can change everything.</div>
+
+      <h4>When to Worry (and When Not To)</h4>
+      <p><strong>Normal:</strong></p>
+      <ul>
+        <li>Breasts feel softer after a feed</li>
+        <li>Baby seems hungry again soon after feeding</li>
+        <li>Baby feeds for 10–45 minutes (huge range is normal)</li>
+        <li>Some nipple tenderness in the first week</li>
+      </ul>
+      <p><strong>Not normal—get support:</strong></p>
+      <ul>
+        <li>Cracked, bleeding nipples</li>
+        <li>Severe pain during feeding</li>
+        <li>Baby not having 6+ wet nappies by day 5</li>
+        <li>Baby lethargic or hard to wake for feeds</li>
+      </ul>
+
+      <h4>Formula Feeding (Without Guilt)</h4>
+      <p>If you are formula feeding—by choice or necessity—you are feeding your baby. That is what matters.</p>
+      <ul class="checkbox-list">
+        <li>Follow prep instructions carefully (water temperature, measurements).</li>
+        <li>Feed on demand, just like breastfeeding—babies will show hunger cues.</li>
+        <li>Hold your baby close during feeds. Skin-to-skin still matters.</li>
+        <li>Ignore anyone who makes you feel less-than. Your baby is fed, loved, and safe.</li>
+      </ul>
+
+      <h4>Combination Feeding</h4>
+      <p>Breast and bottle can coexist. Many mothers do both. If you're supplementing with formula or pumped milk, you're not "failing" at breastfeeding—you're responding to your family's needs.</p>
+      <p><strong>Tip:</strong> If you want to maintain milk supply while supplementing, try to breastfeed or pump at least 8 times in 24 hours.</p>
+
+      <h4>When to Call a Lactation Consultant</h4>
+      <ul class="checkbox-list">
+        <li>Painful latching that doesn't improve</li>
+        <li>Baby not gaining weight as expected</li>
+        <li>You want to breastfeed but it's not working yet</li>
+        <li>You're considering stopping but want to explore options first</li>
+      </ul>
+      <p class="small">Most areas have free or low-cost lactation support through hospitals, public health, or breastfeeding organizations.</p>
+
+      <div class="callout">
+        <strong>A personal note from the author:</strong>
+        <p style="margin-top:0.6em;">My daughter's labour lasted 36 hours. When the doctors finally decided on an intervention, Lulu arrived — but she didn't cry. Oxygen had not reached her brain as it should have. They took her to special care immediately. Two hours later, they brought her back to her mother's arms. But just a few hours after we brought her home, we noticed she was having convulsions — something the hospital had missed. We took her back immediately. She stayed almost a week. A doctor prescribed vitamin B6 — we had to crush it into a powder and mix it into her mother's milk, but she could still taste the bitterness and resisted it every time. We persisted. Slowly — week by week — she got better.</p>
+        <p>Through all of it, I told my daughter: keep breastfeeding. She was exhausted. She had been through so much. But I said to her — your milk is natural. God made it perfectly to satisfy your baby's needs. It will save you from getting up in the night to prepare bottles, to boil and sterilise, to measure and mix. And when she grows and starts teething, she will still feed from you. You will never have to worry that she is hungry. You will never regret this. Thank me later.</p>
+        <p>She did thank me. Lulu grew — healthy, bright, and strong. Her mother's milk gave her everything she needed when she needed it most.</p>
+        <p>So if you are tired, if you are doubting, if someone is telling you formula is easier — hear this: <strong>it is a matter of time and patience.</strong> Every feed is an investment. Every difficult night is building something. The bond you are forming, the nourishment you are giving — it cannot be replicated. Push through the hard days. You will raise a happy, healthy baby. And you will never, ever regret it.</p>
+      </div>
+    </section>
+
+    <!-- DAY 8 -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h3>Day 8</h3>
+      <h2>The Comparison Trap</h2>
+      <div class="callout"><strong>Today's focus:</strong> Her postpartum is not your postpartum. There is no race.</div>
+      <p><strong>Your body today:</strong> You are healing at exactly the pace your body needs. Comparison will only steal your peace.</p>
+      <p><strong>Your heart today:</strong> If you see someone else "bouncing back" or "doing it all," remember: you don't see the whole picture. And even if you did—it wouldn't change what your body needs.</p>
+      <p><strong>One small thing:</strong></p>
+      <ul class="checkbox-list"><li>Unfollow, mute, or skip any account or person who makes you feel behind. Protect your inner space fiercely.</li></ul>
+      <div class="note-box"><strong>My notes / what I noticed today:</strong><br /></div>
+      <footer>The First 40 Days · Day 8</footer>
+    </section>
+
+    <!-- DAY 9 -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h3>Day 9</h3>
+      <h2>Nourish Yourself First</h2>
+      <div class="callout"><strong>Today's focus:</strong> You cannot pour from an empty cup. Feed yourself like you matter—because you do.</div>
+      <p><strong>Your body today:</strong> Your body is rebuilding tissue, producing milk (if breastfeeding), and rebalancing hormones. It needs fuel—real, nourishing food.</p>
+      <p><strong>Your heart today:</strong> It's easy to eat whatever's fastest or skip meals entirely. But your recovery depends on what you put into your body.</p>
+
+      <div class="callout">
+        <strong>Foods that heal:</strong>
+        <p style="margin-top:0.6em;">Across many cultures, new mothers have always been fed with intention — and that wisdom holds. These foods support your recovery, your milk, and your energy:</p>
+        <ul>
+          <li><strong>Warm drinks</strong> — herbal teas, broths, warm water with honey. Stay away from cold drinks while your body is healing.</li>
+          <li><strong>Soups</strong> — easy to digest, deeply nourishing, and warming from within.</li>
+          <li><strong>Liver</strong> — one of the richest sources of iron you can eat. Essential after the blood loss of birth.</li>
+          <li><strong>Honey</strong> — natural energy, anti-inflammatory, and deeply healing. A spoonful in warm water or tea is enough.</li>
+          <li><strong>Natural fats</strong> — ghee, butter, and wholesome animal fats support hormone recovery and keep your body warm.</li>
+          <li><strong>Whole wheat</strong> — sustaining energy and fibre to prevent the constipation that is so common postpartum.</li>
+          <li><strong>Fresh fruits</strong> — vitamins, natural sugars for energy, and gentle support for digestion.</li>
+        </ul>
+        <p>You do not need complicated meals. Simple, warm, real food — prepared by someone who loves you — is exactly what your body is asking for.</p>
+      </div>
+
+      <p><strong>One small thing:</strong></p>
+      <ul class="checkbox-list"><li>Eat three full meals today. Warm, nourishing, easy to digest. Ask someone to prepare them if you can.</li></ul>
+      <div class="note-box"><strong>My notes / what I noticed today:</strong><br /></div>
+      <footer>The First 40 Days · Day 9</footer>
+    </section>
+
+    <!-- DAY 10 -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h3>Day 10</h3>
+      <h2>Halfway Through the Hardest Part</h2>
+      <div class="callout"><strong>Today's focus:</strong> Ten days. You are further than you think.</div>
+      <p><strong>Your body today:</strong> You might be noticing small shifts—less bleeding, a bit more energy, fewer sharp pains. Or you might still feel deep in it. Both are okay.</p>
+      <p><strong>Your heart today:</strong> The first 10 days are often the most disorienting. If you've made it this far, you're through the steepest part of the curve.</p>
+      <p><strong>One small thing:</strong></p>
+      <ul class="checkbox-list"><li>Look back at Day 1. Notice what's different. Even the smallest shift counts.</li></ul>
+      <div class="note-box"><strong>My notes / what I noticed today:</strong><br /></div>
+      <footer>The First 40 Days · Day 10</footer>
+    </section>
+
+    <!-- DEEP DIVE 3 -->
+    <div class="page-break"></div>
+    <section class="section deep-dive">
+      <h2>Deep Dive: Sleep Strategy (Not Sleep Training)</h2>
+      <p class="lead">You won't sleep through the night. But you can still get the rest you need.</p>
+
+      <h4>Survival Sleep vs. Recovery Sleep</h4>
+      <p><strong>Survival sleep:</strong> The fragmented 45-minute naps you grab between feeds. Necessary, but not restorative.</p>
+      <p><strong>Recovery sleep:</strong> A single unbroken stretch of 3–4 hours. This is what your body craves most in the early weeks. One good block makes everything easier.</p>
+      <p><strong>How to get it:</strong> Hand over one feeding window to a partner, family member, or night doula. If you're breastfeeding, pump before bed and let someone else give a bottle. If formula feeding, hand over a full shift.</p>
+
+      <h4>Partner Sleep Rotation (If You Have Support)</h4>
+      <p>Split the night into shifts, not halves. For example:</p>
+      <ul>
+        <li><strong>Shift 1 (9pm–2am):</strong> Partner handles all wake-ups. You sleep uninterrupted.</li>
+        <li><strong>Shift 2 (2am–7am):</strong> You handle wake-ups. Partner sleeps uninterrupted.</li>
+      </ul>
+      <p>Even one night like this per week changes everything.</p>
+
+      <h4>Safe Sleep Space Setup</h4>
+      <ul class="checkbox-list">
+        <li>Keep baby's sleep space (bassinet, crib) within arm's reach of your bed.</li>
+        <li>Dim lighting for night feeds (red or amber light helps preserve your sleepiness).</li>
+        <li>Have everything ready: water, burp cloth, nappies, wipes.</li>
+        <li>Baby sleeps on their side, on a firm flat surface, no loose blankets or toys.</li>
+      </ul>
+
+      <h4>Safe Co-Sleeping Facts (If You Choose To)</h4>
+      <ul class="checkbox-list">
+        <li>Firm mattress, no pillows or heavy blankets near baby.</li>
+        <li>Baby on their back, between you and the wall (not between two adults).</li>
+        <li>No co-sleeping if you or your partner smoke, drink alcohol, take sedatives, or are extremely sleep-deprived.</li>
+        <li>Never co-sleep on a sofa or armchair—this is high-risk for suffocation.</li>
+      </ul>
+      <p class="small">For evidence-based co-sleeping guidance, see resources from La Leche League International or BASIS (Baby Sleep Info Source).</p>
+
+      <h4>Nap Stacking</h4>
+      <p>If your baby naps in short bursts, try "nap stacking": sleep the moment they sleep, even if it's only 20 minutes. Two 20-minute naps back-to-back = 40 minutes of rest. Small deposits add up.</p>
+
+      <h4>Screen Boundaries for Night Feeds</h4>
+      <p>Scrolling your phone during 2am feeds is tempting—but blue light disrupts your ability to fall back asleep. Try:</p>
+      <ul class="checkbox-list">
+        <li>Audiobooks or podcasts (low volume)</li>
+        <li>A dim book light and a paper book</li>
+        <li>Simply resting your eyes while baby feeds</li>
+      </ul>
+    </section>
+
+    <!-- DAY 14 -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h3>Day 14</h3>
+      <h2>Two Weeks: A Threshold</h2>
+      <div class="callout"><strong>Today's focus:</strong> You have crossed the two-week mark. This is not small.</div>
+      <p><strong>Your body today:</strong> Bleeding is likely lighter (pink or brown). Soreness is easing. If breastfeeding, your supply is more established. You are healing—even if it doesn't feel fast.</p>
+      <p><strong>Your heart today:</strong> Two weeks often marks the end of the baby blues for many mothers. If you're still feeling deep sadness, numbness, or anxiety, that's a signal to reach out for support.</p>
+      <p><strong>One small thing:</strong></p>
+      <ul class="checkbox-list"><li>Check in with yourself: Do I feel safe? Do I have support? Do I need help? Answer honestly.</li></ul>
+      <div class="note-box"><strong>My notes / what I noticed today:</strong><br /></div>
+      <footer>The First 40 Days · Day 14</footer>
+    </section>
+
+    <!-- WEEKLY SELF-CHECK 1 -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h2>Weekly Self-Check: End of Week 2</h2>
+      <p class="small">These are not tests. They're gentle check-ins. Answer honestly. No judgment.</p>
+      <table>
+        <tr><td>I am eating at least 2 full meals a day</td><td>☐ Yes  ☐ Sometimes  ☐ No</td></tr>
+        <tr><td>I am drinking enough water (at least 2 liters)</td><td>☐ Yes  ☐ Sometimes  ☐ No</td></tr>
+        <tr><td>I have slept at least one 3-hour stretch in the last 48 hours</td><td>☐ Yes  ☐ No</td></tr>
+        <tr><td>Someone has helped me in the last 2 days</td><td>☐ Yes  ☐ No</td></tr>
+        <tr><td>I have cried this week</td><td>☐ Yes  ☐ No  ☐ Can't remember</td></tr>
+        <tr><td>The crying feels manageable</td><td>☐ Yes  ☐ Mostly  ☐ No</td></tr>
+        <tr><td>I feel safe</td><td>☐ Yes  ☐ Mostly  ☐ No</td></tr>
+        <tr><td>I have someone I can talk to honestly</td><td>☐ Yes  ☐ No</td></tr>
+      </table>
+      <div class="callout"><strong>If you answered "No" or "Can't remember" to most of these:</strong> You need more support. Not because you're failing—because you're human. Tell one person what you need. Today.</div>
+    </section>
+
+    <!-- DEEP DIVE 4 -->
+    <div class="page-break"></div>
+    <section class="section deep-dive">
+      <h2>Deep Dive: Your Emotional Weather</h2>
+      <p class="lead">Baby blues, postpartum depression, and anxiety—knowing the difference can save you.</p>
+
+      <h4>Baby Blues (Very Common, Usually Temporary)</h4>
+      <p><strong>When:</strong> Peaks around days 2–5, usually resolves within 2 weeks.</p>
+      <p><strong>What it feels like:</strong></p>
+      <ul>
+        <li>Tearfulness for no clear reason</li>
+        <li>Mood swings (joy one moment, despair the next)</li>
+        <li>Irritability, anxiety, feeling overwhelmed</li>
+        <li>Trouble sleeping even when baby sleeps</li>
+      </ul>
+      <p><strong>What helps:</strong> Rest, support, nourishing food, letting yourself cry, talking to someone who listens without fixing.</p>
+
+      <h4>Postpartum Depression (PPD) — When to Get Help</h4>
+      <p><strong>When:</strong> Can start anytime in the first year, but often appears in the first 2–8 weeks.</p>
+      <p><strong>What it feels like:</strong></p>
+      <ul>
+        <li>Persistent sadness or emptiness that doesn't lift</li>
+        <li>Numbness, disconnection from baby or yourself</li>
+        <li>Feeling like you're "going through the motions"</li>
+        <li>Intrusive thoughts (e.g., fear of harming baby, thoughts of running away)</li>
+        <li>Difficulty bonding or feeling love for your baby</li>
+        <li>Feeling like your baby (or family) would be better off without you</li>
+      </ul>
+      <div class="warning-box"><strong>This is not your fault. This is not a character flaw.</strong> PPD is a medical condition caused by hormone shifts, sleep deprivation, and physical recovery. It is treatable. You are not broken.</div>
+
+      <h4>Postpartum Anxiety (PPA) — Often Overlooked</h4>
+      <ul>
+        <li>Constant worry, even when things are going well</li>
+        <li>Racing thoughts, inability to "turn off" your brain</li>
+        <li>Physical symptoms: racing heart, shallow breathing, tightness in chest</li>
+        <li>Intrusive "what if" thoughts (often about baby's safety)</li>
+        <li>Hyper-vigilance (checking baby's breathing obsessively, inability to let others help)</li>
+      </ul>
+
+      <h4>When to Call Someone (Right Now, Not Tomorrow)</h4>
+      <ul class="checkbox-list">
+        <li>You have thoughts of harming yourself or your baby</li>
+        <li>You feel completely detached from reality or your baby</li>
+        <li>You are not sleeping even when you have the chance</li>
+        <li>You feel rage or panic that scares you</li>
+        <li>You've been crying daily for more than 2 weeks</li>
+      </ul>
+      <div class="callout">
+        <strong>Who to call:</strong><br />
+        • Your midwife, doctor, or obstetrician<br />
+        • A postpartum mental health helpline (see Resources at the back)<br />
+        • A trusted friend or family member who can help you make the call<br />
+        <br />
+        <strong>If you are in crisis:</strong> Go to your nearest emergency room or call your local emergency number. You deserve immediate help.
+      </div>
+
+      <h4>What Helped Other Mothers</h4>
+      <ul>
+        <li>Therapy (especially postpartum-specialized counselors)</li>
+        <li>Medication (SSRIs are safe for breastfeeding and life-changing for many)</li>
+        <li>Support groups (talking to other mothers who've been there)</li>
+        <li>Letting go of the idea that you should "power through"</li>
+        <li>Saying out loud: "I need help. I'm not okay."</li>
+      </ul>
+      <p class="small"><strong>You are not a bad mother for struggling. You are a human being in an incredibly difficult passage.</strong> Getting help is not weakness—it's the bravest thing you can do.</p>
+    </section>
+
+    <!-- DAY 21 -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h3>Day 21</h3>
+      <h2>Three Weeks: You Know More Than You Think</h2>
+      <div class="callout"><strong>Today's focus:</strong> You are no longer brand new at this. You are learning your baby—and that is everything.</div>
+      <p><strong>Your body today:</strong> Bleeding may have stopped or lightened significantly. Stitches (if you had them) are likely dissolved. Your body is closing what was open.</p>
+      <p><strong>Your heart today:</strong> Three weeks ago, this baby was a stranger. Now you're beginning to read their cues, recognize their cries, know their rhythms. That is profound.</p>
+      <p><strong>One small thing:</strong></p>
+      <ul class="checkbox-list"><li>Notice one thing you've learned about your baby that no one else knows yet. Write it down.</li></ul>
+      <div class="note-box"><strong>My notes / what I noticed today:</strong><br /></div>
+      <footer>The First 40 Days · Day 21</footer>
+    </section>
+
+    <!-- DEEP DIVE 5 -->
+    <div class="page-break"></div>
+    <section class="section deep-dive">
+      <h2>Deep Dive: Watching Your Baby</h2>
+      <p class="lead">What's normal, what's not, and when to trust your gut.</p>
+
+      <h4>Hunger Cues (Before the Cry)</h4>
+      <p>Crying is a <em>late</em> hunger cue. Watch for these earlier signs:</p>
+      <ul>
+        <li>Rooting (turning head side to side, mouth open)</li>
+        <li>Sucking on hands or fists</li>
+        <li>Smacking lips, sticking tongue out</li>
+        <li>Increased alertness or restlessness</li>
+      </ul>
+
+      <h4>Nappy Tracking (The Most Reliable Indicator)</h4>
+      <table>
+        <tr><td>Day 1</td><td>1 wet nappy</td></tr>
+        <tr><td>Day 2</td><td>2 wet nappies</td></tr>
+        <tr><td>Day 3</td><td>3 wet nappies</td></tr>
+        <tr><td>Day 5+</td><td>6+ wet, 3–4 dirty per day</td></tr>
+      </table>
+      <div class="warning-box"><strong>Call your midwife if:</strong> Fewer than 6 wet nappies by day 5, dark concentrated urine, or no dirty nappies for 24+ hours in the first week.</div>
+
+      <h4>Normal Newborn Behavior (That Feels Scary)</h4>
+      <ul>
+        <li><strong>Hiccups after feeds:</strong> Totally normal</li>
+        <li><strong>Sneezing:</strong> Not a cold—clearing nasal passages</li>
+        <li><strong>Startle reflex:</strong> Arms fling out suddenly. Normal until 3–6 months</li>
+        <li><strong>Irregular breathing:</strong> Fast, then slow, sometimes brief pauses (under 10 seconds)</li>
+        <li><strong>Noisy sleep:</strong> Grunting, squeaking—newborns are loud sleepers</li>
+        <li><strong>Cluster feeding:</strong> Every 45–90 min for hours. Builds supply, not a sign of low milk</li>
+      </ul>
+
+      <h4>When to Worry</h4>
+      <div class="warning-box">
+        <strong>Call your doctor immediately if:</strong>
+        <ul>
+          <li>Baby is lethargic, floppy, or very hard to wake</li>
+          <li>Fever over 38°C (in babies under 3 months, always call)</li>
+          <li>Very fast breathing (over 60 breaths/min at rest) or grunting with every breath</li>
+          <li>Blue or very pale lips/skin</li>
+          <li>Refuses to feed for 4–6+ hours</li>
+          <li>Projectile vomiting (forceful, shoots across room)</li>
+          <li>No wet nappies for 12+ hours</li>
+        </ul>
+      </div>
+
+      <h4>After Feed Positioning</h4>
+      <p>After every feed, hold your baby upright against your chest or shoulder until they burp — this releases swallowed air and prevents colic and discomfort. Take your time with this; don't rush to put them down.</p>
+      <p>Once your baby has burped:</p>
+      <ul>
+        <li><strong>If falling asleep</strong> — lay them gently on their side, alternating left and right with each feed. This helps the milk settle comfortably and encourages the head to develop an even, beautiful shape.</li>
+        <li><strong>If still awake</strong> — place them on their back for interaction, eye contact, and gentle play.</li>
+      </ul>
+      <p>Never leave your baby unattended on their side.</p>
+
+      <h4>Trust Your Gut</h4>
+      <p>You know your baby better than anyone. If something feels off, even if you can't name it, trust that instinct. Call your midwife, doctor, or local health line. You are not bothering them.</p>
+    </section>
+
+    <!-- DAY 28 -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h3>Day 28</h3>
+      <h2>Four Weeks: The Fog Is Lifting</h2>
+      <div class="callout"><strong>Today's focus:</strong> One month. You are no longer brand new at this.</div>
+      <p><strong>Your body today:</strong> Most postpartum bleeding has stopped by now. If you had a C-section, your incision is likely healed on the surface. You may feel more like yourself physically—or still deep in recovery. Both are okay.</p>
+      <p><strong>Your heart today:</strong> Four weeks ago, everything felt impossible. Now, some things feel hard—but not impossible. That shift matters.</p>
+      <p><strong>One small thing:</strong></p>
+      <ul class="checkbox-list"><li>Look back at your notes from Week 1. Notice what's different. Even the smallest change is proof you're moving through this.</li></ul>
+      <div class="note-box"><strong>My notes / what I noticed today:</strong><br /></div>
+      <footer>The First 40 Days · Day 28</footer>
+    </section>
+
+    <!-- DEEP DIVE 6 -->
+    <div class="page-break"></div>
+    <section class="section deep-dive">
+      <h2>Deep Dive: Relationships Under Pressure</h2>
+      <p class="lead">How to talk, ask, and protect connection when you're both exhausted.</p>
+
+      <h4>Talking to Your Partner When You're Running on Empty</h4>
+      <p><strong>What helps:</strong></p>
+      <ul>
+        <li><strong>Be specific.</strong> "I need more help" is vague. "I need you to take the baby 9–11pm every night so I can sleep" is actionable.</li>
+        <li><strong>Ask before you resent.</strong> Don't wait until you're furious.</li>
+        <li><strong>Name the imbalance.</strong> If you're doing most night wake-ups, say it out loud. Resentment grows in silence.</li>
+      </ul>
+
+      <h4>Navigating In-Laws and Parents</h4>
+      <p><strong>Boundary scripts:</strong></p>
+      <div class="script-box">"We're not having visitors this week—we'll let you know when we're ready."</div>
+      <div class="script-box">"We're trying it this way for now. If we need advice, we'll ask."</div>
+      <div class="script-box">"If you'd like to visit, we'd love if you could bring a meal and keep it to 30 minutes."</div>
+
+      <h4>Asking for What You Need (Exactly)</h4>
+      <div class="script-box">"Can you bring us dinner on Thursday at 6pm? Anything easy is perfect."</div>
+      <div class="script-box">"Can you hold the baby for an hour while I nap? You don't need to do anything else."</div>
+      <div class="script-box">"Can you pick up groceries? Here's a list."</div>
+    </section>
+
+    <!-- DAY 35 -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h3>Day 35</h3>
+      <h2>Five Weeks: The Beginning After the Beginning</h2>
+      <div class="callout"><strong>Today's focus:</strong> The fog is lifting. You're starting to see the shape of your new life.</div>
+      <p><strong>Your body today:</strong> You are likely cleared for gentle movement if you haven't already started. Your six-week check is coming. You are healing—even if it doesn't feel complete.</p>
+      <p><strong>Your heart today:</strong> Five weeks ago, you couldn't imagine today. But here you are. That matters.</p>
+      <p><strong>One small thing:</strong></p>
+      <ul class="checkbox-list"><li>Think ahead to your six-week check. Write down any questions or concerns you want to bring up with your doctor.</li></ul>
+      <div class="note-box"><strong>My notes / what I noticed today:</strong><br /></div>
+      <footer>The First 40 Days · Day 35</footer>
+    </section>
+
+    <!-- DEEP DIVE 7 -->
+    <div class="page-break"></div>
+    <section class="section deep-dive">
+      <h2>Deep Dive: Who You Are Now</h2>
+      <p class="lead">Identity after birth—mourning, becoming, and building something new.</p>
+
+      <h4>The Woman You Were</h4>
+      <p>She's not gone. But she's not the same, either. And that's okay to grieve.</p>
+      <p>You may miss: spontaneity, uninterrupted sleep, your body as your own, conversations that aren't about babies, time alone, feeling competent and in control.</p>
+      <p>All of that is real. Naming it doesn't make you ungrateful. It makes you honest.</p>
+
+      <h4>The Mother You're Becoming</h4>
+      <p>You don't have to know who she is yet. She's still forming—slowly, quietly, in the space between exhaustion and awe.</p>
+
+      <h4>Mourning Your Old Life (And Still Loving Your New One)</h4>
+      <p>These feelings can coexist:</p>
+      <ul>
+        <li>I love my baby. <em>And</em> I miss my old life.</li>
+        <li>I'm grateful. <em>And</em> I'm grieving.</li>
+        <li>This is beautiful. <em>And</em> this is hard.</li>
+      </ul>
+      <p>You don't have to choose one. You're allowed to hold both.</p>
+
+      <h4>Building Your New Rhythm</h4>
+      <p><strong>What helps:</strong></p>
+      <ul>
+        <li>One small routine (morning coffee during baby's nap, evening walk, bedtime ritual)</li>
+        <li>Lowering expectations—permanently, not just for now</li>
+        <li>Asking for ongoing help (this doesn't end at 6 weeks)</li>
+        <li>Reconnecting with one thing that's just yours</li>
+      </ul>
+    </section>
+
+    <!-- DAY 40 -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h3>Day 40</h3>
+      <h2>The Beginning After the Beginning</h2>
+      <div class="callout"><strong>Today's focus:</strong> Forty days. You made it.</div>
+      <p><strong>Your body today:</strong> You have healed in ways you can see and ways you can't. Your body will continue to change and settle for months—but the hardest part of physical recovery is behind you.</p>
+      <p><strong>Your heart today:</strong> Forty days ago, you had no idea what this would feel like. And here you are—still standing, still showing up, still becoming.</p>
+      <p><strong>One small thing:</strong></p>
+      <ul class="checkbox-list"><li>Read the closing letter on the next page. Then close this book knowing: you did it. And you don't have to do it perfectly to have done it well.</li></ul>
+      <div class="note-box"><strong>My notes / what I noticed today:</strong><br /></div>
+      <footer>The First 40 Days · Day 40</footer>
+    </section>
+
+    <!-- FINAL SELF-CHECK -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h2>Final Self-Check: Day 40</h2>
+      <p class="small">One last gentle check-in. You've come so far.</p>
+      <table>
+        <tr><td>I am eating regularly and well</td><td>☐ Yes  ☐ Mostly  ☐ No</td></tr>
+        <tr><td>I am staying hydrated</td><td>☐ Yes  ☐ Mostly  ☐ No</td></tr>
+        <tr><td>I have support I can count on</td><td>☐ Yes  ☐ Sometimes  ☐ No</td></tr>
+        <tr><td>I am getting enough sleep to function</td><td>☐ Yes  ☐ Mostly  ☐ No</td></tr>
+        <tr><td>I feel connected to my baby</td><td>☐ Yes  ☐ Sometimes  ☐ No</td></tr>
+        <tr><td>I feel mostly okay emotionally</td><td>☐ Yes  ☐ Sometimes  ☐ No</td></tr>
+        <tr><td>I have asked for help when I needed it</td><td>☐ Yes  ☐ Sometimes  ☐ No</td></tr>
+        <tr><td>I feel safe and supported</td><td>☐ Yes  ☐ Mostly  ☐ No</td></tr>
+      </table>
+      <div class="callout"><strong>If you're struggling:</strong> The 40 days are ending, but support doesn't stop here. Keep reaching out. Keep asking. You still deserve care.</div>
+    </section>
+
+    <!-- CLOSING LETTER -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h2>A Closing Letter: What the First 40 Days Leave Behind</h2>
+      <p class="lead">You made it. And that is everything.</p>
+      <p>Forty days ago, you crossed a threshold. Your body opened. A life came through. And in the space between who you were and who you're becoming, you survived something extraordinary.</p>
+      <p>You survived the bleeding, the stitches, the sleepless nights. You survived the crying—yours and theirs. You survived the doubt, the loneliness, the moments when you weren't sure you could keep going. And yet, here you are.</p>
+      <p>The first 40 days don't end cleanly. There's no fanfare, no medal, no moment when everything suddenly feels easy. But something has shifted. You know your baby now—the way they breathe, the way they cry, the way they settle in your arms. You know yourself differently too.</p>
+      <p>You've learned that rest is not laziness. That asking for help is not weakness. That loving your baby and missing your old life can both be true. That some days, survival is the victory.</p>
+      <p>What comes next will still be hard. There will be new challenges, new uncertainties, new ways you'll doubt yourself. But you'll meet them with something you didn't have 40 days ago: the knowledge that you can endure more than you thought possible. That your body is capable of astonishing things. That you are stronger than you believed.</p>
+      <p>So as you close this book, I want you to know: you didn't have to do it perfectly. You didn't have to love every moment. You didn't have to feel grateful all the time. You just had to show up—and you did.</p>
+      <p>The woman you are now—tired, tender, fierce, uncertain, powerful—she is enough. She has always been enough.</p>
+      <hr class="rule" />
+      <p>With deep respect for all you've survived,<br /><strong>Aurelia Vale</strong><br /><span class="small">For the mother who made it through</span></p>
+    </section>
+
+    <!-- "IS THIS NORMAL?" -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h2>"Is This Normal?" Quick Reference Guide</h2>
+      <p class="lead">The most-Googled postpartum fears—answered plainly.</p>
+
+      <h4>Bleeding</h4>
+      <p><strong>Normal:</strong> Heavy for 1–2 weeks, tapering to pink/brown over 4–6 weeks. Small clots up to plum-sized.</p>
+      <div class="warning-box"><strong>Call if:</strong> Soaking pad in under an hour, clots larger than plum, foul smell, sudden increase after it slowed.</div>
+
+      <h4>Pain</h4>
+      <p><strong>Normal:</strong> Cramping (especially during breastfeeding), perineal soreness, C-section tenderness, back/neck pain from holding baby.</p>
+      <div class="warning-box"><strong>Call if:</strong> Severe abdominal pain, incision hot/red/oozing, pain worsening, severe pain urinating.</div>
+
+      <h4>Emotions</h4>
+      <p><strong>Normal:</strong> Crying (days 2–14), mood swings, anxiety, overwhelm, not feeling instant love, missing old life.</p>
+      <div class="warning-box"><strong>Call if:</strong> Sadness beyond 2 weeks, detachment from baby, intrusive harm thoughts, can't sleep even when possible, feeling family would be better off without you.</div>
+
+      <h4>Feeding</h4>
+      <p><strong>Normal:</strong> 8–12 feeds/24hrs, cluster feeding evenings, nipple tenderness first week, feeding 10–45 min.</p>
+      <div class="warning-box"><strong>Call lactation if:</strong> Cracked/bleeding nipples, severe pain, baby not gaining weight, fewer than 6 wet nappies by day 5.</div>
+
+      <h4>Your Body</h4>
+      <p><strong>Normal:</strong> Night sweats, hair loss (from 3 months), breast engorgement, leaking, stretch marks, loose skin, different shape.</p>
+      <div class="warning-box"><strong>Call if:</strong> Fever over 38°C, one leg swollen/red/painful, severe headache, vision changes, chest pain, breathing difficulty.</div>
+
+      <h4>Your Baby</h4>
+      <p><strong>Normal:</strong> Frequent feeding, irregular sleep, unexplained crying, grunting/noisy breathing, hiccups, sneezing, startle reflex.</p>
+      <div class="warning-box"><strong>Call if:</strong> Lethargic/floppy, fever over 38°C (under 3 months), refuses feeds 4–6hrs, fewer than 6 wet nappies by day 5, blue lips/skin, projectile vomiting.</div>
+
+      <p class="small"><strong>When in doubt, call.</strong> You're not overreacting. You're being a good mother.</p>
+    </section>
+
+    <!-- BOUNDARY SCRIPTS -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h2>Boundary Scripts: What to Say (Word-for-Word)</h2>
+      <p class="lead">For when you need the words but don't have the energy to find them.</p>
+
+      <h4>Limiting Visitors</h4>
+      <div class="script-box">"We're not having visitors for the first two weeks while we recover. We'll let you know when we're ready."</div>
+      <div class="script-box">"We'd love to see you, but we're keeping visits short—30 minutes max. Can you come at [specific time]?"</div>
+      <div class="script-box">"We're only having visitors who can bring a meal and hold the baby while I rest."</div>
+
+      <h4>Declining Advice</h4>
+      <div class="script-box">"Thanks for the suggestion—we're trying something different right now."</div>
+      <div class="script-box">"I appreciate you sharing. We're figuring out what works for us."</div>
+      <div class="script-box">"I didn't ask for advice, but I'll keep that in mind."</div>
+
+      <h4>Asking Your Partner for Help</h4>
+      <div class="script-box">"I need you to take the baby 9–11pm every night so I can get solid sleep."</div>
+      <div class="script-box">"I need you to handle all night wake-ups tonight. I'm at my limit."</div>
+      <div class="script-box">"I need you to make dinner and clean the kitchen. I don't have it in me."</div>
+
+      <h4>Protecting Your Space</h4>
+      <div class="script-box">"We're not up for hosting. If you visit, please don't expect us to entertain you."</div>
+      <div class="script-box">"Please text before coming over—we're not taking drop-ins."</div>
+
+      <h4>Declining Outings</h4>
+      <div class="script-box">"We're not leaving the house much yet. Let's plan something in a few weeks."</div>
+      <div class="script-box">"I'm not up for that right now, but thanks for thinking of us."</div>
+
+      <p class="small"><strong>Remember:</strong> "No" is a complete sentence. Use it freely.</p>
+    </section>
+
+    <!-- ======== RESOURCES — UPDATED FOR GLOBAL AUDIENCE ======== -->
+    <div class="page-break"></div>
+    <section class="section">
+      <h2>Resources Worth Having</h2>
+      <p class="lead">Where to find help when you need it.</p>
+
+      <h4>Postpartum Mental Health</h4>
+      <ul>
+        <li><strong>Postpartum Support International:</strong> postpartum.net · Helpline: +1-800-944-4773</li>
+        <li><strong>International Marce Society (global perinatal mental health):</strong> marcesociety.com</li>
+        <li><strong>International Association for Women's Mental Health:</strong> iawmh.org</li>
+      </ul>
+
+      <h4>Breastfeeding Support</h4>
+      <ul>
+        <li><strong>La Leche League International:</strong> llli.org</li>
+        <li><strong>International Breastfeeding Centre:</strong> ibconline.ca</li>
+        <li><strong>World Alliance for Breastfeeding Action:</strong> waba.org.my</li>
+      </ul>
+
+      <h4>Physical Recovery</h4>
+      <ul>
+        <li><strong>Pelvic floor physio:</strong> Ask your doctor or midwife for a referral</li>
+        <li><strong>Birth Trauma Association (global resource):</strong> birthtraumaassociation.org.uk</li>
+        <li><strong>International Society for Pelvic Floor Dysfunction:</strong> ispfd.com</li>
+      </ul>
+
+      <h4>General Support</h4>
+      <ul>
+        <li><strong>World Health Organization — maternal &amp; newborn care:</strong> who.int/maternal-health</li>
+        <li><strong>UNICEF Baby-Friendly Initiative:</strong> unicef.org/programme/breastfeeding</li>
+      </ul>
+
+      <h4>Crisis Support</h4>
+      <ul>
+        <li><strong>Emergency services:</strong> Your local emergency number (911 / 999 / 112 / 15 — use what applies to you)</li>
+        <li><strong>Befrienders Worldwide (emotional support, global):</strong> befrienders.org</li>
+        <li><strong>International Association for Suicide Prevention — crisis centres directory:</strong> iasp.info/resources/Crisis_Centres/</li>
+      </ul>
+
+      <div class="callout">
+        <strong>A note on local support:</strong> The most helpful resource is often the one closest to you. Search <em>"postpartum support + [your country]"</em> or ask your midwife, doctor, or health visitor to connect you with local services. You don't have to find everything on your own.
+      </div>
+    </section>
+
+    <!-- MY NOTES -->
+    <div class="page-break"></div>
+    <section class="section"><h2>My Notes</h2><div class="note-box" style="min-height: 450pt;"></div></section>
+    <div class="page-break"></div>
+    <section class="section"><h2>My Notes</h2><div class="note-box" style="min-height: 450pt;"></div></section>
+    <div class="page-break"></div>
+    <section class="section"><h2>My Notes</h2><div class="note-box" style="min-height: 450pt;"></div></section>
+    <div class="page-break"></div>
+    <section class="section"><h2>My Notes</h2><div class="note-box" style="min-height: 450pt;"></div></section>
+    <div class="page-break"></div>
+    <section class="section"><h2>My Notes</h2><div class="note-box" style="min-height: 450pt;"></div></section>
+
+    <!-- BACK COVER -->
+    <div class="page-break"></div>
+    <section class="title-card">
+      <div class="spacer"></div>
+      <p class="lead" style="font-style: italic; color: var(--muted);">
+        "You are not failing. You are in the middle of something that has no middle—only a slow, quiet becoming."
+      </p>
+      <div class="spacer"></div>
+      <hr class="rule" />
+      <p class="small">AV Collections · Aurelia Vale · 2026<br />For the mother who made it through.</p>
+    </section>
+
+  </div>
+</body>
+</html>
