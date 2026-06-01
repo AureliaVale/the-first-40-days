@@ -1,224 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The First 40 Days — A New Mom's Guided Companion</title>
-<meta name="description" content="A warm, practical day-by-day companion for new mothers navigating the first 40 days after birth. By Aurelia Vale.">
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The First 40 Days — A Postpartum Companion for New Mothers | Aurelia Vale</title>
+  <meta name="description" content="A warm, honest, day-by-day guide for new mothers navigating the first 40 days after birth. Practical support, gentle reassurance, and real wisdom. Instant PDF download." />
+  <meta name="author" content="Aurelia Vale" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="The First 40 Days — A Postpartum Companion for New Mothers" />
+  <meta property="og:description" content="A warm, honest guide for new mothers navigating the most tender and overwhelming season of their lives. Practical, gentle, and real." />
+  <meta property="og:image" content="https://AureliaVale.github.io/the-first-40-days/cover-40days.jpg" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://www.aureliavale.work.gd/the-first-40-days.html" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  body {
-    font-family: 'EB Garamond', serif;
-    background: #faf8f4;
-    color: #2c2c2c;
-    line-height: 1.8;
-  }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #fdfaf6;
+      color: #2c2c2c;
+      line-height: 1.8;
+    }
 
-  /* Hero */
-  .hero {
-    background: linear-gradient(160deg, #2d4a3e 0%, #3d6b58 100%);
-    padding: 60px 20px;
-    text-align: center;
-  }
+    header {
+      text-align: center;
+      padding: 2.5rem 1.5rem 1.5rem;
+      border-bottom: 1px solid #e8e0d5;
+    }
 
-  .hero img {
-    width: 220px;
-    border-radius: 4px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    margin-bottom: 36px;
-  }
+    header a {
+      text-decoration: none;
+      color: #2c2c2c;
+    }
 
-  .hero h1 {
-    color: #f0f7f0;
-    font-size: 2.6rem;
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 12px;
-  }
+    header .site-name {
+      font-size: 1.5rem;
+      letter-spacing: 0.05em;
+      font-weight: normal;
+    }
 
-  .hero h2 {
-    color: #a5d6a7;
-    font-size: 1.25rem;
-    font-style: italic;
-    font-weight: 400;
-    margin-bottom: 24px;
-  }
+    header .tagline {
+      font-size: 0.85rem;
+      color: #8a7968;
+      margin-top: 0.3rem;
+      font-style: italic;
+    }
 
-  .hero .author {
-    color: rgba(240,247,240,0.7);
-    font-size: 1rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-  }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
 
-  /* Body */
-  .container {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 60px 24px;
-  }
+    .book-cover {
+      display: block;
+      margin: 0 auto 2.5rem;
+      max-width: 220px;
+      border-radius: 4px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
 
-  .tagline {
-    font-size: 1.35rem;
-    font-style: italic;
-    color: #3d6b58;
-    text-align: center;
-    margin-bottom: 48px;
-    line-height: 1.7;
-  }
+    .book-label {
+      text-align: center;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #8a7968;
+      margin-bottom: 0.5rem;
+    }
 
-  .divider {
-    width: 60px;
-    height: 1px;
-    background: linear-gradient(to right, transparent, #3d6b58, transparent);
-    margin: 40px auto;
-  }
+    h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      text-align: center;
+      line-height: 1.3;
+      margin-bottom: 0.4rem;
+    }
 
-  .description {
-    font-size: 1.15rem;
-    color: #3a3a3a;
-    margin-bottom: 24px;
-    line-height: 1.9;
-  }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      color: #8a7968;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
 
-  .inside-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #2d4a3e;
-    margin: 40px 0 20px;
-    letter-spacing: 0.05em;
-  }
+    .author {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-bottom: 0.8rem;
+    }
 
-  .inside-list {
-    list-style: none;
-    padding: 0;
-  }
+    .price-tag {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #2c2c2c;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.03em;
+    }
 
-  .inside-list li {
-    padding: 10px 0 10px 28px;
-    position: relative;
-    font-size: 1.1rem;
-    color: #3a3a3a;
-    border-bottom: 1px solid rgba(61,107,88,0.1);
-  }
+    .cta-buy {
+      display: block;
+      width: fit-content;
+      margin: 0 auto 1rem;
+      background: #2c2c2c;
+      color: #fdfaf6;
+      text-decoration: none;
+      padding: 0.75rem 2rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
 
-  .inside-list li::before {
-    content: '✦';
-    position: absolute;
-    left: 0;
-    color: #3d6b58;
-    font-size: 0.7rem;
-    top: 14px;
-  }
+    .cta-buy:hover { background: #555; }
 
-  /* CTA */
-  .cta-box {
-    background: linear-gradient(160deg, #2d4a3e, #3d6b58);
-    border-radius: 8px;
-    padding: 48px 32px;
-    text-align: center;
-    margin: 60px 0 0;
-  }
+    .cta-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #aaa;
+      margin-bottom: 3rem;
+    }
 
-  .cta-box .price {
-    color: #a5d6a7;
-    font-size: 2rem;
-    font-style: italic;
-    margin-bottom: 8px;
-  }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: normal;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #8a7968;
+      margin-bottom: 1rem;
+      margin-top: 2.5rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e8e0d5;
+    }
 
-  .cta-box .price-note {
-    color: rgba(240,247,240,0.6);
-    font-size: 0.95rem;
-    margin-bottom: 32px;
-    font-style: italic;
-  }
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+    }
 
-  .buy-btn {
-    display: inline-block;
-    background: #a5d6a7;
-    color: #1a3a2e;
-    font-family: 'EB Garamond', serif;
-    font-size: 1.2rem;
-    font-style: italic;
-    padding: 16px 48px;
-    border-radius: 4px;
-    text-decoration: none;
-    letter-spacing: 0.05em;
-    transition: background 0.2s;
-  }
+    ul {
+      margin: 0 0 1.5rem 1.2rem;
+    }
 
-  .buy-btn:hover {
-    background: #c8e6c9;
-  }
+    ul li {
+      margin-bottom: 0.6rem;
+      font-size: 1rem;
+    }
 
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 40px 20px;
-    color: rgba(44,44,44,0.4);
-    font-size: 0.85rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-</style>
+    blockquote {
+      border-left: 3px solid #c8b89a;
+      margin: 2rem 0;
+      padding: 0.8rem 1.5rem;
+      background: #f5f0ea;
+      border-radius: 0 4px 4px 0;
+      font-style: italic;
+      color: #555;
+    }
+
+    blockquote cite {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      font-style: normal;
+      color: #8a7968;
+    }
+
+    .nav-books {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e8e0d5;
+      font-size: 0.9rem;
+      color: #8a7968;
+    }
+
+    .nav-books a {
+      color: #2c2c2c;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .nav-books ul {
+      margin-top: 0.8rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    .nav-books ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: #aaa;
+      border-top: 1px solid #e8e0d5;
+    }
+
+    footer a { color: #8a7968; text-decoration: none; }
+  </style>
 </head>
 <body>
 
-<div class="hero">
-  <img src="cover-40days.jpg" alt="The First 40 Days book cover">
-  <h1>The First 40 Days</h1>
-  <h2>A New Mom's Guided Companion</h2>
-  <div class="author">Aurelia Vale · AV Collections 2026</div>
-</div>
+  <header>
+    <a href="/">
+      <div class="site-name">Aurelia Vale</div>
+      <div class="tagline">AV Collections · Where every word is a world</div>
+    </a>
+  </header>
 
-<div class="container">
+  <div class="container">
 
-  <p class="tagline">
-    Day by day, through the tenderness and the exhaustion,<br>
-    the wonder and the uncertainty — you are not alone.
-  </p>
+    <img
+      class="book-cover"
+      src="https://AureliaVale.github.io/the-first-40-days/cover-40days.jpg"
+      alt="The First 40 Days — A postpartum wellness guide for new mothers by Aurelia Vale"
+      onerror="this.style.display='none'"
+    />
 
-  <div class="divider"></div>
+    <p class="book-label">AV Collections · Wellness &amp; Motherhood</p>
+    <h1>The First 40 Days</h1>
+    <p class="subtitle">A New Mother's Guided Companion</p>
+    <p class="author">by Aurelia Vale</p>
+    <p class="price-tag">€7.49 · Instant PDF Download</p>
 
-  <p class="description">
-    The first forty days after birth are like no other time in a woman's life. Your body is healing. Your heart is full and overwhelmed at once. Everything has changed, and no one quite prepared you for how quietly enormous this transformation would be.
-  </p>
+    <a class="cta-buy" href="https://av-edu-lab.lemonsqueezy.com/checkout/buy/344a2a21-f88e-4655-ab10-f4e36d2beb72" target="_blank" rel="noopener">
+      Download Now — €7.49
+    </a>
+    <p class="cta-note">Instant delivery · PDF format · Read on any device</p>
 
-  <p class="description">
-    This companion walks beside you — one day at a time. Not with clinical checklists or generic advice, but with warmth, honesty, and the kind of guidance that feels like a wise friend sitting with you over a warm drink.
-  </p>
+    <h2>About This Book</h2>
 
-  <p class="description">
-    Written by a grandmother who has witnessed this journey up close, and who believes that every new mother deserves to feel seen, supported, and never alone.
-  </p>
+    <p>The first forty days after birth are like no other season in a woman's life. Everything has changed — the body, the rhythm of the days, the weight of responsibility, the flood of feelings that arrive without warning. And yet, so often, new mothers are left to navigate this time with very little real guidance.</p>
 
-  <div class="divider"></div>
+    <p>This book was written to sit beside you during those days.</p>
 
-  <div class="inside-title">What's Inside</div>
-  <ul class="inside-list">
-    <li>40 daily pages — each with a focus theme, body check-in, heart check-in, and one small action</li>
-    <li>7 deep dives — feeding, sleep, emotional wellness, your baby, relationships, and identity</li>
-    <li>Honest guidance on baby blues, postpartum anxiety, and knowing when to ask for help</li>
-    <li>Boundary scripts — word for word, for the moments you don't know what to say</li>
-    <li>A personal story — real, warm, and true</li>
-    <li>Global resources — relevant wherever you are in the world</li>
-    <li>5 blank notes pages — because your story matters too</li>
-  </ul>
+    <p>Written by a retired teacher and grandmother who has witnessed this season across generations, <em>The First 40 Days</em> is a warm, honest, day-by-day companion for new mothers. Not a medical manual. Not a list of rules. A genuine, human presence on the page — one that acknowledges how tender and overwhelming early motherhood can be, and offers practical support without pressure or judgment.</p>
 
-  <div class="cta-box">
-    <div class="price">€7.49</div>
-    <div class="price-note">Instant PDF download · Yours to keep forever</div>
-    <a href="https://av-edu-lab.lemonsqueezy.com/checkout/buy/344a2a21-f88e-4655-ab10-f4e36d2beb72" class="buy-btn">Download Your Copy</a>
+    <p>Whether you are a first-time mother or returning to this season with a new baby, this guide meets you where you are — with reassurance, with clarity, and with the quiet conviction that you are doing better than you think.</p>
+
+    <h2>What This Book Offers</h2>
+
+    <ul>
+      <li>Day-by-day guidance through the postpartum period</li>
+      <li>Honest, practical advice for physical and emotional recovery</li>
+      <li>Gentle reassurance for the moments of doubt and overwhelm</li>
+      <li>Wisdom on rest, nourishment, and caring for yourself while caring for your baby</li>
+      <li>A calm, supportive voice when the days feel long and the nights longer</li>
+      <li>Reflections on the profound transformation that early motherhood brings</li>
+    </ul>
+
+    <h2>Who This Book Is For</h2>
+
+    <ul>
+      <li>New mothers in the first weeks after birth</li>
+      <li>Expecting mothers preparing for the postpartum period</li>
+      <li>Mothers who feel overwhelmed and are looking for calm, practical support</li>
+      <li>Family members wanting to understand what a new mother truly needs</li>
+      <li>Anyone who believes the postpartum season deserves more care and attention than it usually receives</li>
+    </ul>
+
+    <blockquote>
+      "The first forty days are not a recovery. They are a becoming."
+      <cite>— Aurelia Vale</cite>
+    </blockquote>
+
+    <h2>About the Format</h2>
+
+    <p>This is an instant-download PDF, readable on any device — phone, tablet, or computer. No waiting, no shipping. Purchase once and keep it for as long as you need it.</p>
+
+    <a class="cta-buy" href="https://av-edu-lab.lemonsqueezy.com/checkout/buy/344a2a21-f88e-4655-ab10-f4e36d2beb72" target="_blank" rel="noopener">
+      Download Now — €7.49
+    </a>
+
+    <nav class="nav-books">
+      <strong>Explore more books by Aurelia Vale</strong>
+      <ul>
+        <li><a href="/the-deeper-story.html">The Deeper Story</a> — 50 literary fiction writing prompts</li>
+        <li><a href="/beneath-the-same-sky.html">Beneath the Same Sky</a> — A free introduction to Islam</li>
+        <li><a href="/">← Back to all books</a></li>
+      </ul>
+    </nav>
+
   </div>
 
-</div>
-
-<footer>
-  © 2026 Aurelia Vale · AV Collections · Where every word is a world.
-</footer>
+  <footer>
+    © 2026 Aurelia Vale · <a href="/">AV Collections</a> · All rights reserved
+  </footer>
 
 </body>
 </html>
