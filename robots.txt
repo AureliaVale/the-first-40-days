@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aureliavale.github.io/the-first-40-days/sitemap.xml
