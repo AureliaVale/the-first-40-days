@@ -12,7 +12,6 @@
   <meta property="og:image" content="https://AureliaVale.github.io/the-first-40-days/cover-40days.jpg" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://www.aureliavale.work.gd/the-first-40-days.html" />
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0X632PCT4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -22,191 +21,30 @@
   </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: Georgia, 'Times New Roman', serif;
-      background: #fdfaf6;
-      color: #2c2c2c;
-      line-height: 1.8;
-    }
-
-    header {
-      text-align: center;
-      padding: 2.5rem 1.5rem 1.5rem;
-      border-bottom: 1px solid #e8e0d5;
-    }
-
-    header a {
-      text-decoration: none;
-      color: #2c2c2c;
-    }
-
-    header .site-name {
-      font-size: 1.5rem;
-      letter-spacing: 0.05em;
-      font-weight: normal;
-    }
-
-    header .tagline {
-      font-size: 0.85rem;
-      color: #8a7968;
-      margin-top: 0.3rem;
-      font-style: italic;
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem 5rem;
-    }
-
-    .book-cover {
-      display: block;
-      margin: 0 auto 2.5rem;
-      max-width: 220px;
-      border-radius: 4px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-    }
-
-    .book-label {
-      text-align: center;
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #8a7968;
-      margin-bottom: 0.5rem;
-    }
-
-    h1 {
-      font-size: 2rem;
-      font-weight: normal;
-      text-align: center;
-      line-height: 1.3;
-      margin-bottom: 0.4rem;
-    }
-
-    .subtitle {
-      text-align: center;
-      font-style: italic;
-      color: #8a7968;
-      font-size: 1.05rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .author {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #aaa;
-      margin-bottom: 0.8rem;
-    }
-
-    .price-tag {
-      text-align: center;
-      font-size: 1.1rem;
-      color: #2c2c2c;
-      margin-bottom: 1.5rem;
-      letter-spacing: 0.03em;
-    }
-
-    .cta-buy {
-      display: block;
-      width: fit-content;
-      margin: 0 auto 1rem;
-      background: #2c2c2c;
-      color: #fdfaf6;
-      text-decoration: none;
-      padding: 0.75rem 2rem;
-      font-size: 0.95rem;
-      letter-spacing: 0.05em;
-      border-radius: 2px;
-      transition: background 0.2s;
-    }
-
+    body { font-family: Georgia, 'Times New Roman', serif; background: #fdfaf6; color: #2c2c2c; line-height: 1.8; }
+    header { text-align: center; padding: 2.5rem 1.5rem 1.5rem; border-bottom: 1px solid #e8e0d5; }
+    header a { text-decoration: none; color: #2c2c2c; }
+    header .site-name { font-size: 1.5rem; letter-spacing: 0.05em; font-weight: normal; }
+    header .tagline { font-size: 0.85rem; color: #8a7968; margin-top: 0.3rem; font-style: italic; }
+    .container { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .book-cover { display: block; margin: 0 auto 2.5rem; max-width: 220px; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+    .book-label { text-align: center; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7968; margin-bottom: 0.5rem; }
+    h1 { font-size: 2rem; font-weight: normal; text-align: center; line-height: 1.3; margin-bottom: 0.4rem; }
+    .subtitle { text-align: center; font-style: italic; color: #8a7968; font-size: 1.05rem; margin-bottom: 0.5rem; }
+    .author { text-align: center; font-size: 0.9rem; color: #aaa; margin-bottom: 0.8rem; }
+    .price-tag { text-align: center; font-size: 1.1rem; color: #2c2c2c; margin-bottom: 1.5rem; letter-spacing: 0.03em; }
+    .cta-buy { display: block; width: fit-content; margin: 0 auto 1rem; background: #2c2c2c; color: #fdfaf6; text-decoration: none; padding: 0.75rem 2rem; font-size: 0.95rem; letter-spacing: 0.05em; border-radius: 2px; transition: background 0.2s; }
     .cta-buy:hover { background: #555; }
-
-    .cta-note {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #aaa;
-      margin-bottom: 3rem;
-    }
-
-    h2 {
-      font-size: 1.1rem;
-      font-weight: normal;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #8a7968;
-      margin-bottom: 1rem;
-      margin-top: 2.5rem;
-      padding-bottom: 0.4rem;
-      border-bottom: 1px solid #e8e0d5;
-    }
-
-    p {
-      margin-bottom: 1.2rem;
-      font-size: 1rem;
-    }
-
-    ul {
-      margin: 0 0 1.5rem 1.2rem;
-    }
-
-    ul li {
-      margin-bottom: 0.6rem;
-      font-size: 1rem;
-    }
-
-    blockquote {
-      border-left: 3px solid #c8b89a;
-      margin: 2rem 0;
-      padding: 0.8rem 1.5rem;
-      background: #f5f0ea;
-      border-radius: 0 4px 4px 0;
-      font-style: italic;
-      color: #555;
-    }
-
-    blockquote cite {
-      display: block;
-      margin-top: 0.5rem;
-      font-size: 0.85rem;
-      font-style: normal;
-      color: #8a7968;
-    }
-
-    .nav-books {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid #e8e0d5;
-      font-size: 0.9rem;
-      color: #8a7968;
-    }
-
-    .nav-books a {
-      color: #2c2c2c;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    .nav-books ul {
-      margin-top: 0.8rem;
-      list-style: none;
-      padding: 0;
-    }
-
-    .nav-books ul li {
-      margin-bottom: 0.4rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.8rem;
-      color: #aaa;
-      border-top: 1px solid #e8e0d5;
-    }
-
+    .cta-note { text-align: center; font-size: 0.8rem; color: #aaa; margin-bottom: 3rem; }
+    h2 { font-size: 1.1rem; font-weight: normal; letter-spacing: 0.06em; text-transform: uppercase; color: #8a7968; margin-bottom: 1rem; margin-top: 2.5rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e8e0d5; }
+    p { margin-bottom: 1.2rem; font-size: 1rem; }
+    ul { margin: 0 0 1.5rem 1.2rem; }
+    ul li { margin-bottom: 0.6rem; font-size: 1rem; }
+    blockquote { border-left: 3px solid #c8b89a; margin: 2rem 0; padding: 0.8rem 1.5rem; background: #f5f0ea; border-radius: 0 4px 4px 0; font-style: italic; color: #555; }
+    blockquote cite { display: block; margin-top: 0.5rem; font-size: 0.85rem; font-style: normal; color: #8a7968; }
+    .nav-books { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e8e0d5; font-size: 0.9rem; color: #8a7968; }
+    .nav-books a { color: #2c2c2c; text-decoration: underline; text-underline-offset: 3px; }
+    footer { text-align: center; padding: 2rem; font-size: 0.8rem; color: #aaa; border-top: 1px solid #e8e0d5; }
     footer a { color: #8a7968; text-decoration: none; }
   </style>
 </head>
@@ -240,17 +78,12 @@
     <p class="cta-note">Instant delivery · PDF format · Read on any device</p>
 
     <h2>About This Book</h2>
-
     <p>The first forty days after birth are like no other season in a woman's life. Everything has changed — the body, the rhythm of the days, the weight of responsibility, the flood of feelings that arrive without warning. And yet, so often, new mothers are left to navigate this time with very little real guidance.</p>
-
     <p>This book was written to sit beside you during those days.</p>
-
     <p>Written by a retired teacher and grandmother who has witnessed this season across generations, <em>The First 40 Days</em> is a warm, honest, day-by-day companion for new mothers. Not a medical manual. Not a list of rules. A genuine, human presence on the page — one that acknowledges how tender and overwhelming early motherhood can be, and offers practical support without pressure or judgment.</p>
-
     <p>Whether you are a first-time mother or returning to this season with a new baby, this guide meets you where you are — with reassurance, with clarity, and with the quiet conviction that you are doing better than you think.</p>
 
     <h2>What This Book Offers</h2>
-
     <ul>
       <li>Day-by-day guidance through the postpartum period</li>
       <li>Honest, practical advice for physical and emotional recovery</li>
@@ -261,7 +94,6 @@
     </ul>
 
     <h2>Who This Book Is For</h2>
-
     <ul>
       <li>New mothers in the first weeks after birth</li>
       <li>Expecting mothers preparing for the postpartum period</li>
@@ -276,7 +108,6 @@
     </blockquote>
 
     <h2>About the Format</h2>
-
     <p>This is an instant-download PDF, readable on any device — phone, tablet, or computer. No waiting, no shipping. Purchase once and keep it for as long as you need it.</p>
 
     <a class="cta-buy" href="https://av-edu-lab.lemonsqueezy.com/checkout/buy/82ec190f-9e20-475f-958e-6f9535565a15" target="_blank" rel="noopener">
@@ -284,12 +115,7 @@
     </a>
 
     <nav class="nav-books">
-      <strong>Explore more books by Aurelia Vale</strong>
-      <ul>
-        <li><a href="/the-deeper-story.html">The Deeper Story</a> — 50 literary fiction writing prompts</li>
-        <li><a href="/beneath-the-same-sky.html">Beneath the Same Sky</a> — A free introduction to Islam</li>
-        <li><a href="/">← Back to all books</a></li>
-      </ul>
+      <a href="https://aureliavale.github.io">← Visit the Blogspot</a>
     </nav>
 
   </div>
