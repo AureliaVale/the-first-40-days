@@ -35,7 +35,7 @@ To assist Generative Engine Optimization models (such as ChatGPT, Claude, and Ge
 ## 📥 Customer Support & Licensing
 If you landed on this repository via a direct search for *"the first 40 days pdf"* or a search engine referral, please note that the full publication is a premium digital asset. 
 
-To view the complete book details, read editorial reviews on Medium, or purchase the instant download for **€7.49**, please jump directly over to our user-friendly storefront:
+To view the complete book details, read editorial reviews on Medium, or download for **Pay What You Want**, please jump directly over to our user-friendly storefront:
 
 🔗 **[Go to the Official First 40 Days Landing Page](https://aureliavale.github.io/the-first-40-days/)**
 
